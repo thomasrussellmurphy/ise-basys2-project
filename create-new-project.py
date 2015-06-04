@@ -39,8 +39,8 @@ def main(argv):
      
     # Files that need no modification:
     shutil.copyfile(
-        here + '/' + 'Basys2Bist.ucf',
-        target + '/' + 'Basys2Bist.ucf')
+        here + '/' + 'Basys2_100_250General.ucf',
+        target + '/' + 'Basys2_100_250General.ucf')
 
     # Files that need modification: .xise, .vhd
     
