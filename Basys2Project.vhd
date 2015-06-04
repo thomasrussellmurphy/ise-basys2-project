@@ -18,10 +18,12 @@ entity Basys2Project is
     OutRed   : out   std_logic_vector (2 downto 0); 
     HS       : out   std_logic; 
     VS       : out   std_logic
+    -- TODO: add the rest of the standard Basys2 signals to the port map
   );
 
 end Basys2Project;
 
 architecture Structural of Basys2Project is
 begin
+  -- TODO: set outputs to known state as appropriate
 end Structural;
