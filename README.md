@@ -2,7 +2,7 @@
 
 A default project and project creator for Digilent's Basys2 Xilinx Spartan-3E development boards.
 
-To create a new project folder for the first time (with defaults), do the following:
+To create a new project folder for the first time, do the following:
 
 Set your working directory to `ise-basys2-project`
 ```
