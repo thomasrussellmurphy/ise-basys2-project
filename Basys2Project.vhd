@@ -42,5 +42,22 @@ end Basys2Project;
 
 architecture Structural of Basys2Project is
 begin
-  -- TODO: set outputs to known state as appropriate
+  -- Set LED indicators dark
+  LED <= (others => '0');
+  SEG <= (others => '1');
+  AN <= (others => '1');
+  DP <= '1';
+  
+  -- Set VGA all low
+  VGA_RED <= (others => '0');
+  VGA_GREEN <= (others => '0');
+  VGA_BLUE <= (others => '0');
+  VGA_HS <= '0';
+  VGA_VS <= '0';
+  
+  --Tristate all INOUTs
+  PS2C <= 'Z';
+  PS2D <= 'Z';
+  PIO <= (others => 'Z');
+  EppDB <= (others => 'Z');
 end Structural;
