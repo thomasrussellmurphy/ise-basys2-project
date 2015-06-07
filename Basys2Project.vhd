@@ -6,25 +6,36 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity Basys2Project is
   port (
   	-- Clock inputs
-    mclk     : in    std_logic;
-    uclk     : in    std_logic;
+    MCLK      : in    std_logic;
+    UCLK      : in    std_logic;
     -- User physical inputs
-    btn      : in    std_logic_vector (3 downto 0);
-    sw       : in    std_logic_vector (7 downto 0);
+    BTN       : in    std_logic_vector (3 downto 0);
+    SW        : in    std_logic_vector (7 downto 0);
     -- User LED/Display outputs
-    led      : out   std_logic_vector (7 downto 0);
-    seg      : out   std_logic_vector (6 downto 0);
-    an       : out   std_logic_vector (3 downto 0);
-    dp       : out   std_logic;
+    LED       : out   std_logic_vector (7 downto 0);
+    SEG       : out   std_logic_vector (6 downto 0);
+    AN        : out   std_logic_vector (3 downto 0);
+    DP        : out   std_logic;
     -- VGA Interface
-    OutBlue  : out   std_logic_vector (2 downto 1);
-    OutGreen : out   std_logic_vector (2 downto 0);
-    OutRed   : out   std_logic_vector (2 downto 0);
-    HSYNC    : out   std_logic;
-    VSYNC    : out   std_logic
-    -- TODO: add the rest of the standard Basys2 signals to the port map
+    VGA_RED   : out   std_logic_vector (2 downto 0);
+    VGA_GREEN : out   std_logic_vector (2 downto 0);
+    VGA_BLUE  : out   std_logic_vector (2 downto 1);
+    VGA_HS    : out   std_logic;
+    VGA_VS    : out   std_logic;
     -- PS2
+    PS2C      : inout std_logic;
+	PS2D      : inout std_logic;
     -- Expansion headers (6-pin, 4 data connections each)
+    -- JA: 1 to 4 are 72 to 75
+    -- JB: 1 to 4 are 76 to 79
+    -- JC: 1 to 4 are 80 to 83
+    -- JD: 1 to 4 are 84 to 87
+	PIO       : inout std_logic_vector (87 downto 72);
+	-- Data interface to PC via USB
+	EppAstb   : in    std_logic;
+	EppDstb   : in    std_logic;
+	EppWr     : in    std_logic;
+	EppDB     : inout std_logic_vector (7 downto 0)
   );
 
 end Basys2Project;
