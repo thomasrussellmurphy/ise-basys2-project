@@ -35,6 +35,7 @@ entity Basys2Project is
 	EppAstb   : in    std_logic;
 	EppDstb   : in    std_logic;
 	EppWr     : in    std_logic;
+	EppWait   : out   std_logic;
 	EppDB     : inout std_logic_vector (7 downto 0)
   );
 
@@ -58,6 +59,6 @@ begin
   --Tristate all INOUTs
   PS2C <= 'Z';
   PS2D <= 'Z';
-  PIO <= (others => 'Z');
-  EppDB <= (others => 'Z');
+  PIO <= (others => '0') when (false) else (others => 'Z');
+  EppDB <= (others => '0') when (false) else (others => 'Z');
 end Structural;
