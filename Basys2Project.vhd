@@ -56,6 +56,9 @@ begin
   VGA_HS <= '0';
   VGA_VS <= '0';
   
+  -- Set EppWait to no-ack
+  EppWait <= '0';
+  
   --Tristate all INOUTs
   PS2C <= 'Z';
   PS2D <= 'Z';
