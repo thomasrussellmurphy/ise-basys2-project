@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Basys2Project is
   port (
-  	-- Clock inputs
+    -- Clock inputs
     MCLK      : in    std_logic;
     UCLK      : in    std_logic;
     -- User physical inputs
@@ -24,19 +24,19 @@ entity Basys2Project is
     VGA_VS    : out   std_logic;
     -- PS2
     PS2C      : inout std_logic;
-	PS2D      : inout std_logic;
+    PS2D      : inout std_logic;
     -- Expansion headers (6-pin, 4 data connections each)
     -- JA: 1 to 4 are 72 to 75
     -- JB: 1 to 4 are 76 to 79
     -- JC: 1 to 4 are 80 to 83
     -- JD: 1 to 4 are 84 to 87
-	PIO       : inout std_logic_vector (87 downto 72);
-	-- Data interface to PC via USB
-	EppAstb   : in    std_logic;
-	EppDstb   : in    std_logic;
-	EppWr     : in    std_logic;
-	EppWait   : out   std_logic;
-	EppDB     : inout std_logic_vector (7 downto 0)
+    PIO       : inout std_logic_vector (87 downto 72);
+    -- Data interface to PC via USB
+    EppAstb   : in    std_logic;
+    EppDstb   : in    std_logic;
+    EppWr     : in    std_logic;
+    EppWait   : out   std_logic;
+    EppDB     : inout std_logic_vector (7 downto 0)
   );
 
 end Basys2Project;
