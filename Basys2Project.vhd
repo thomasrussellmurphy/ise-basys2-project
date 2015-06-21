@@ -59,7 +59,7 @@ begin
   -- Set EppWait to no-ack
   EppWait <= '0';
   
-  --Tristate all INOUTs
+  -- Tristate all INOUTs
   PS2C <= 'Z';
   PS2D <= 'Z';
   PIO <= (others => '0') when (false) else (others => 'Z');
