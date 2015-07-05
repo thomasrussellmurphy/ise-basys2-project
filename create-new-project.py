@@ -31,19 +31,14 @@ def main(argv):
 
     # print target
     print("Working in " + target)
-    
-    # Files that need only name modification:
-#     shutil.copyfile(
-#         here + '/' + basys2 + '.sdc',
-#         target + '/' + desired_name + '.sdc')
-     
+
     # Files that need no modification:
     shutil.copyfile(
         here + '/' + 'Basys2_100_250General.ucf',
         target + '/' + 'Basys2_100_250General.ucf')
 
     # Files that need modification: .xise, .vhd
-    
+
     # Load file strings
     xise = open(os.path.abspath(here + "/" + basys2 + ".xise"), 'r').read()
     vhd = open(os.path.abspath(here + "/" + basys2 + ".vhd"), 'r').read()
