@@ -16,3 +16,11 @@ Alternatively, the project creation script can be made executable:
 ```
 chmod +x create-new-project.py
 ```
+
+# Important ISE Settings
+
+## FPGA Start-Up Clock
+
+The default clock source defined in the bitstream file for the FPGA on startup is `CCLK`. This is the correct clock source if the design will programmed onto the Basys2 Platform Flash. However, this is not the clock source that you want during development.
+
+For direct loading from Adept2 onto the Spartan 3E FPGA, the startup clock needs to be changed to `JTAG Clock`. To do this, select the top-level design file listed under the FPGA device name in the Hierarchy pane of the Design sidebar in Xilinx ISE. Then right-click the design process `Generate Programming File` and select the `Process Properties...` option. In the windows that opens, select the `Startup Options` category on the left. The first item in the list should be the property `FPGA Start-Up Clock`. In the drop-down menu for this property, select the value `JTAG Clock` to override the default `CCLK`. To save this change, click either the `OK` or `Apply` buttons at the bottom of the options window.
