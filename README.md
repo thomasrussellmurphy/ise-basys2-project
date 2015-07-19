@@ -23,6 +23,12 @@ Alternatively, the project creation script can be made executable:
 chmod +x create-new-project.py
 ```
 
+If you are planning on using Git to do version control of your ISE project,
+[this `.gitignore`][ise-gitignore] may help you substantially. A version of this
+file is the `.gitignore` for this repository.
+
+[ise-gitignore]: https://github.com/thomasrussellmurphy/trm-snippets/blob/master/gitignores/xilinx_ise_project-.gitignore
+
 # Important ISE Settings
 
 ## FPGA Start-Up Clock
